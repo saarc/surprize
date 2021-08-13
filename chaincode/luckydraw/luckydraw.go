@@ -18,12 +18,12 @@ type SmartContract struct {
 
 // Draw 구조체 정의
 type Draw struct {
-	Pid				string		`json:"pid"`
+	Pid			string		`json:"pid"`
 	Pname			string		`json:"pname"`
 	Pmanager		string		`json:"pmanager"`
 	Pparam			int 		`json:"pparam`
 	Pstate			string		`json:"pstate"` // registered, joining, draw, finalized
-	Participants	[]string 	`json:"participants"`
+	Participants		[]string 	`json:"participants"`
 	Winners			[]string	`json:"winners"`
 }
 
