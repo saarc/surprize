@@ -38,10 +38,7 @@ async function main() {
         // Get the contract from the network.
         const contract = network.getContract('luckydraw');
 
-        // Submit the specified transaction.
-        // createCar transaction - requires 5 argument, ex: ('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom')
-        // changeCarOwner transaction - requires 2 args , ex: ('changeCarOwner', 'CAR10', 'Dave')
-        await contract.submitTransaction("join","D102", "DU10055");
+        await contract.submitTransaction("register","D202", "last1","mgr1","1");
         console.log('Transaction has been submitted');
 
         // Disconnect from the gateway.

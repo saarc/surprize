@@ -10,6 +10,9 @@ set -ev
 # don't rewrite paths for Windows Git Bash users
 export MSYS_NO_PATHCONV=1
 
+# CA private key file name 
+export BASIC_CA1_PRIVATE_KEY=$(cd crypto-config/peerOrganizations/org1.example.com/ca && ls *_sk)
+
 docker-compose -f docker-compose.yml down
 
 # container creation -> docker network net_basic creation
@@ -21,6 +24,12 @@ docker ps -a
 export FABRIC_START_TIMEOUT=10
 #echo ${FABRIC_START_TIMEOUT}
 sleep ${FABRIC_START_TIMEOUT}
+
+
+sleep 1
+echo "Sleeping 15s to allow ETCDRAFT cluster to complete booting"
+sleep 14
+
 
 # Create the channel
 # 결과 mychannel.block -> peer0.org1.example.com working dir 저장

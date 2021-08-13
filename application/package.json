@@ -1,5 +1,5 @@
 {
-    "name": "fabcar",
+    "name": "surprize",
     "version": "1.0.0",
     "description": "FabCar application implemented in JavaScript",
     "engines": {
@@ -16,7 +16,10 @@
     "license": "Apache-2.0",
     "dependencies": {
         "fabric-ca-client": "~1.4.0",
-        "fabric-network": "~1.4.0"
+        "fabric-network": "~1.4.0",
+        "express": "4.17.1",
+        "body-parser": "1.19.0",
+        "jquery": "3.5.1"
     },
     "devDependencies": {
         "chai": "^4.2.0",
